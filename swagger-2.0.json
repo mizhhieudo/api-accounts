@@ -1,0 +1,39 @@
+{
+  "paths": {
+    "/api/api-accounts": {
+      "get": {
+        "operationId": "AppController_getHello",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "api-accounts API spec",
+    "description": "base core by mizhhieudo | [swagger.json](swagger.json) | [swagger-2.0.json](swagger-2.0.json)",
+    "version": "0.1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "swagger": "2.0",
+  "host": "127.0.0.1:3111",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/",
+  "definitions": {},
+  "securityDefinitions": {
+    "bearer": {
+      "scheme": "bearer",
+      "bearerFormat": "JWT",
+      "name": "access-token",
+      "type": "apiKey",
+      "in": "header"
+    }
+  },
+  "x-components": {}
+}

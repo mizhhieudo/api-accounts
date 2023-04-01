@@ -1,0 +1,18 @@
+service:
+  name: api-accounts
+  alias: api-accounts
+  description: base core by mizhhieudo
+  baseUrl: /api/api-accounts
+  docsBaseUrl: /docs/api-accounts
+  environment: local
+  apiVersion: 0.1.0
+  appVersion: 0.1.0
+
+server:
+  host: 127.0.0.1
+  port: 3111
+  hostname: 127.0.0.1:3111
+  swaggerSchema: http
+
+mongodb:
+  uri: mongodb+srv://minhhieudoit:hieu1234@cluster0.qeipyzw.mongodb.net/?retryWrites=true&w=majority

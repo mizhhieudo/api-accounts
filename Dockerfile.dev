@@ -1,0 +1,15 @@
+FROM node:alpine as development
+
+ARG WORK_DIR=/var/www/node
+
+WORKDIR ${WORK_DIR}
+
+COPY ./package.json ./
+
+RUN npm install --only=development
+
+COPY ./ ./ 
+
+RUN npm run build
+
+CMD ["npm","run start:dev"]

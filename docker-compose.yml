@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+    dev:
+        container_name: accounts-api-container
+        image: mizhhieudoit/accounts-base-api:latest
+        build:
+            context: .
+            target: development
+            dockerfile: ./Dockerfile
+        command: npm run start:debug
+        ports:
+            - 3111:3111
+        volumes:
+            - .:/var/www/node
+            - /var/www/node/node_modules
+        restart: unless-stopped
+    prod:
+        container_name: accounts-api-container-prod
+        image: mizhhieudoit/accounts-base-api-prod:latest
+        build:
+            context: .
+            target: production
+            dockerfile: ./Dockerfile
+        command: npm run start:prod
+        ports:
+            - 3111:3111
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        restart: unless-stopped
